@@ -1,0 +1,32 @@
+/* src/SlidingText.css */
+
+.marquee-container {
+    width: 100%; /* Full width of the container */
+    overflow: hidden;
+    padding: 10px 0; /* Padding for spacing */
+    position: relative; /* Position for inner elements */
+    display: flex; /* Flexbox for centered alignment */
+    align-items: center; /* Vertically center the text */
+  }
+  
+  .marquee {
+    display: flex; /* Flex display for continuous flow */
+    white-space: nowrap; /* Prevent line breaks */
+    animation: slide 20s linear infinite; /* Continuous sliding animation */
+  }
+  
+  .marquee-content {
+    display: inline-block; /* Inline block to allow smooth sliding */
+    padding-right: 100%; /* Space between duplicates */
+    color: rgb(30, 221, 81);
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0); /* Start position */
+    }
+    100% {
+      transform: translateX(-100%); /* Slide to end position */
+    }
+  }
+  

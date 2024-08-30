@@ -1,38 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
 .App {
-  text-align: center;
+  padding: 0px 20px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* THE mobile view  */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 500px) {
+  .App{
+    margin: 20px 5px;
   }
+  .navcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 20px;
+  }
+  .logo-icon, .sigin-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  .logo img{
+    width: 50px;
+    height: auto;
+  }
+  .date{
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .time{
+    border: 1px solid black;
+    padding: 2px 7px;
+  font-family: 'Orbitron', sans-serif; /* Use the digital font */
+  letter-spacing: 0.1em; /* Optional: adjust spacing for a digital look */
+
+  }
+  .user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  /* Section one  */
+  /* THe video tag  */
+  /* Container for the background video and overlay */
+.background-video-container {
+  position: relative;
+  width: 100%;
+  height: 550px; /* Full viewport height */
+  overflow: hidden; /* Hide anything outside the container */
+  padding-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style for the background video */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire container */
+  z-index: -1; /* Place the video behind other content */
+}
+
+/* Dark overlay on top of the video */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1; /* Place the overlay above the video but below the content */
+}
+
+/* Content on top of the overlay */
+.content {
+  position: relative;
+  z-index: 2; /* Ensure the content is above the overlay */
+  color: white; /* Text color for contrast */
+  padding: 100px 0px;
+}
+
+.content h1 {
+  margin: 0;
+  font-size: 2.6em;
+  text-align: left;
+  padding: 0px 30px;
+
+}
+
+.content p {
+  font-size: 1.2em;
+  text-align: left;
+  padding: 0px 30px;
+
+
+}
+.jallaradiolink{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: auto;
+  height: 250px;
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  color: white; /* Text color for contrast */
+  text-align: center; /* Center the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 30px;
+  border-radius: 30px;
+  margin-top: 0px;
+}
+.jallaradiolink img{
+  width: 100px;
+  height: auto;
+  border-radius: 30px;
+  /* padding-bottom: 100px; */
+  
+}
+.jallaradiolink span{
+  position: relative;
+  color: rgb(26, 146, 90);
+  font-size: 15px;
+  top: 100px;
+  right: 50px;
+}
+.playIcon{
+  position: relative;
+  color: black;
+  font-size: 35px;
+  top: 100px;
+  right: 50px;
+}
+
+/* Section two  */
+.sectionTwoContainer{
+  text-align: center;
+
+  padding: 50px 0px;
+}
+
+/* section three  */
+.card{
+  position: relative;
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure no overflow from the overlay */
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.Newscard{
+  height: 400px;
+  width: 100%;
+}
+.newsContent{
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+  color: white; /* Text color for contrast */
+  text-align: center; /* Center the text */
+  padding: 180px 20px 20px; /* Add some padding around the content */
+}
+.goherebtn{
+  padding: 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px 10px;
+  border: 1px solid gray;
+  background-color: transparent;
   color: white;
+  margin: 20px 0px;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 10px; */
+}
+.feetcard{
+  height: 300px;
+  width: auto;
+  text-align: right;
+}
+.musiccard,.pepcard{
+  height: 350px;
+  width: auto;
+  text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+/* section four  */
+.sect4btn{
+  padding: 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px 10px;
+  border: 1px solid gray;
+  background-color: transparent;
+  margin: 40px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+.textslider{
+  display: flex;
+  gap: 10px;
+}
+.trendCard{
+  height: 400px;
+  width: auto;
+}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
