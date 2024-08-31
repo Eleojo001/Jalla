@@ -18,9 +18,9 @@ function Navigation() {
             <div className="logo">
             <img src="favicon.ico" alt="" />
         </div>
+        </div>
         <div className="menuIcon">
         <Dropdown options={options}/>
-        </div>
         </div>
         
         <div className="sigin-date">
