@@ -3,6 +3,7 @@
   padding: 0px 20px;
   margin: 0;
   box-sizing: border-box;
+  font-size: 15px;
 }
 
 /* THE mobile view  */
@@ -21,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 45px;
   }
   .logo img{
     width: 50px;
@@ -83,7 +84,7 @@
   position: relative;
   z-index: 2; /* Ensure the content is above the overlay */
   color: white; /* Text color for contrast */
-  padding: 100px 0px;
+  padding: 50px 0px;
 }
 
 .content h1 {
@@ -97,7 +98,7 @@
 .content p {
   font-size: 1.2em;
   text-align: left;
-  padding: 0px 30px;
+  padding: 0px 30px 30px;
 
 
 }
@@ -106,7 +107,7 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 250px;
+  height: 240px;
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repeating the image */

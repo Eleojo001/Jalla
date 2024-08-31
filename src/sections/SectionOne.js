@@ -18,7 +18,7 @@ function SectionOne() {
 
       {/* Content on top of the overlay */}
       <div className="content">
-        <h1>Jalla Radio 98.1FM  </h1>
+        <h1>Jalla Broadcasting Network  </h1>
         <p>THE PEOPLE'S RADIO.</p>
       <div className="jallaradiolink"style={{ backgroundImage:'url(logo192.png)'
            }} >
