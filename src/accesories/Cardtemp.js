@@ -12,9 +12,9 @@ function Cardtemp({cardDetails}) {
     <div>
         <div className="cardData">
             {cardDetails.map((details, index) =>(
-        <div className=" card trendCard" key={index} style={{backgroundImage:`url(${details.bgimage})`,}} data-aos="zoom-in-down" >
+        <div className=" card" key={index} style={{backgroundImage:`url(${details.bgimage})`,}} data-aos="zoom-in-down" >
                 <div className="overlay"></div>
-                <div className="newsContent" style={{textAlign:'center', padding:'80px 20px', marginTop:'150px'}}>
+                <div className="newsContent" style={{textAlign:'center'}}>
                 <h2>{details.cardHeader} </h2> 
                 <p>{details.paragraph}</p>
                 <button className='goherebtn' style={{textAlign:'center', justifyContent:'center'}} >

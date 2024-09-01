@@ -56,8 +56,8 @@ function SectionThree() {
     },[]);
   return (
     <div>
-      <h1>Our <span style={{color:'rgb(27,147,19)'}}>Specials</span></h1>
-      <p>Take a sneak peek of every category on this channel below.</p>
+      <h1 data-aos="fade-right">Our <span style={{color:'rgb(27,147,19)'}}>Specials</span></h1>
+      <p data-aos="fade-left">Take a sneak peek of every category on this channel below.</p>
         <div className="girdcontainer">
             <div className=''  data-aos="flip-up"  >
                 <CardData className=''
@@ -66,7 +66,7 @@ function SectionThree() {
                  bgimage={latestNews.bgimage}
                  btn='Go here'
                 //  height='400px'
-                 padding='200px 20px 40px'
+                 padding='80px 20px 20px'
                  textAlign='center'
                  />
                 
@@ -86,7 +86,7 @@ function SectionThree() {
                  text={latesMusic.text}
                  bgimage={latesMusic.bgimage}
                  btn='Go here'
-                 padding='70px 20px 20px'
+                 padding='50px 20px 20px'
                  textAlign='right'
                  />
             </div> 
@@ -96,7 +96,7 @@ function SectionThree() {
                  text={latestPodcast.text}
                  bgimage={latestPodcast.bgimage}
                  btn='Go here'  
-                 padding='130px 20px 20px'  
+                 padding='60px 20px 20px'  
                  textAlign='center'
                  />
             </div>

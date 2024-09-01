@@ -44,17 +44,17 @@ function SectionFour() {
         <div className="sec4header">
             <h1 data-aos="fade-in">Trending <span style={{color:'rgb(27,147,19)'}}>Topics</span></h1>
         </div>
-        <div className="sec4p">
+        <div className="sec4p" data-aos="fade-up-right">
             <p>We cover everything from music, news and album reviews
              to cultural insights and community highlight</p>
         </div>
         <div className="sec4btn">
-        <button className='sect4btn'>
+        <button className='sect4btn' data-aos="fade-down-right">
         Go   <span style={{color:'rgb(27,147,19)'}}>here</span> <BsArrowRight />
         </button>
         </div>
         <div className="sect4date">
-        <div>{formatDate()}</div>
+        <div data-aos="zoom-in-down">{formatDate()}</div>
         <div className="textslider">
           <h4 style={{color:'rgb(27,147,19)'}}>Trending</h4>  <SlidingText/>
         </div>
