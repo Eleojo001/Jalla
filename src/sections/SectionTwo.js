@@ -8,7 +8,7 @@ function SectionTwo() {
   },[]);
   return (
     <div className='sectionTwoContainer' data-aos="zoom-in">
-        <h1>About us</h1>
+        <h1>About  <span style={{color:'rgb(27,147,19)'}}>us</span></h1>
         
 
         <h2>THE PEAOPLE'S RADIO</h2>
