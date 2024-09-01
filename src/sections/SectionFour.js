@@ -1,6 +1,9 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { BsArrowRight } from "react-icons/bs";
 import SlidingText from '../accesories/SlidingText';
+import Cardtemp from '../accesories/Cardtemp';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 
 function SectionFour() {
@@ -12,10 +15,34 @@ function SectionFour() {
     
         return `${day} ${month} ${year}`; // Format the date as "21 August 2024"
       };
+      const cardData = [{
+        bgimage:'trend1.jpg',
+        cardHeader:'Topic one',
+        paragraph:'This is to say that it works',
+        cardbtn:'Go here'
+      },{
+        bgimage:'trend2.jpg',
+        cardHeader:'Topic Two',
+        paragraph:'This is to say that it works',
+        cardbtn:'Go here'
+      },{
+        bgimage:'trend3.jpg',
+        cardHeader:'Topic Three',
+        paragraph:'This is to say that it works',
+        cardbtn:'Go here'
+      },{
+        bgimage:'trend4.jpg',
+        cardHeader:'Topic Four',
+        paragraph:'This is to say that it works',
+        cardbtn:'Go here'
+      },]
+      useEffect(()=>{
+        AOS.init({duration: 2000});
+      },[]);
   return (
     <div>
         <div className="sec4header">
-            <h1>Top Stories</h1>
+            <h1 data-aos="fade-in">Trending Topics</h1>
         </div>
         <div className="sec4p">
             <p>We cover everything from music, news and album reviews
@@ -33,42 +60,7 @@ function SectionFour() {
         </div>
         </div>
         <div className="trendingStories">
-        <div className=" card trendCard" style={{backgroundImage:'url(trend1.jpg)',}} >
-                <div className="overlay"></div>
-                <div className="newsContent" style={{textAlign:'center', padding:'80px 20px', marginTop:'150px'}}>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt! </h2> 
-                <button className='goherebtn' style={{textAlign:'center', justifyContent:'center'}} >
-                    Go here <BsArrowRight />
-                </button>
-                </div>
-            </div> 
-        <div className=" card trendCard" style={{backgroundImage:'url(trend2.jpg)',}} >
-                <div className="overlay"></div>
-                <div className="newsContent" style={{textAlign:'center', padding:'80px 20px', marginTop:'150px'}}>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt! </h2> 
-                <button className='goherebtn' style={{textAlign:'center', justifyContent:'center'}} >
-                    Go here <BsArrowRight />
-                </button>
-                </div>
-            </div> 
-        <div className=" card trendCard" style={{backgroundImage:'url(trend3.jpg)',}} >
-                <div className="overlay"></div>
-                <div className="newsContent" style={{textAlign:'center', padding:'80px 20px', marginTop:'150px'}}>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt! </h2> 
-                <button className='goherebtn' style={{textAlign:'center', justifyContent:'center'}} >
-                    Go here <BsArrowRight />
-                </button>
-                </div>
-            </div> 
-        <div className=" card trendCard" style={{backgroundImage:'url(trend4.jpg)',}} >
-                <div className="overlay"></div>
-                <div className="newsContent" style={{textAlign:'center', padding:'80px 20px', marginTop:'150px'}}>
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, deserunt! </h2> 
-                <button className='goherebtn' style={{textAlign:'center', justifyContent:'center'}} >
-                    Go here <BsArrowRight />
-                </button>
-                </div>
-            </div> 
+        <Cardtemp cardDetails = {cardData} />
         </div>
     </div>
   )
