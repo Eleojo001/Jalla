@@ -1,11 +1,19 @@
-import React, {useEffect} from 'react';
+import React, {useEffect,useContext,useState} from 'react';
 import CardData from './CardData';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { DataContext } from '../App';
+
+
 
 
 
 function SectionThree() {
+  
+  const category = useContext(DataContext)
+  console.log(category)
+  const [section, setSection] = useState(category.news)
+  const [visible, setVisible] = useState(4)
   const newsArray = [
     { id: 12, heading: 'Listen Live Radio Test',
       text:'Tune in live to Jalla Radio 98.1FM',
@@ -32,9 +40,9 @@ function SectionThree() {
   ];
   
   // Find the object with the largest id
-  const latestNews = newsArray.reduce((max, current) => {
+  const latestNews = section.reduce((max, current) => {
     return current.id > max.id ? current : max;
-  }, newsArray[0]);
+  }, section[0]);
   const latestFeeds = feedsArray.reduce((max, current) => {
     return current.id > max.id ? current : max;
   }, feedsArray[0]);
@@ -61,11 +69,11 @@ function SectionThree() {
         <div className="girdcontainer">
             <div className=''  data-aos="flip-up"  >
                 <CardData className=''
-                 heading={latestNews.heading}
-                 text={latestNews.text}
-                 bgimage={latestNews.bgimage}
-                 btn='Go here'
-                //  height='400px'
+                 heading={latestNews.title}
+                //  text={latestNews.text}
+                 bgimage={latestNews.image}
+                 label='Go here'
+                 href='/news'
                  padding='80px 20px 20px'
                  textAlign='center'
                  />

@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useContext} from 'react'
 import { BsArrowRight } from "react-icons/bs";
 import SlidingText from '../accesories/SlidingText';
 import Cardtemp from '../accesories/Cardtemp';

@@ -6,7 +6,7 @@ import Dropdown from '../accesories/Dropdown';
 
 function Navigation() {
     const options = [
-        { label: 'News', href: '#' },
+        { label: 'News', href: '/news' },
         { label: 'Radio', href: '#' },
         { label: 'Televisoin', href: '#' },
         { label: 'Presenter', href: '#' },
@@ -15,9 +15,11 @@ function Navigation() {
   return (
     <div className='navcontainer'>
         <div className="logo-icon">
+            <a href="/" style={{textDecoration:'none'}}>
             <div className="logo">
-            <img src="favicon.ico" alt="" />
-        </div>
+            <img src="/favicon.ico" alt="" className='logoimg'/>
+            </div>    
+            </a>
         </div>
         <div className="menuIcon">
         <Dropdown options={options}/>

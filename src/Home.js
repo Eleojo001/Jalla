@@ -6,6 +6,7 @@ import SectionThree from './sections/SectionThree'
 import SectionFour from './sections/SectionFour'
 import Footer from './sections/Footer'
 import BackToTop from './accesories/BackTop'
+import SectionFive from './sections/SectionFive'
 
 function Home() {
   const heading = 'To check'
@@ -16,6 +17,7 @@ function Home() {
       <SectionTwo />
       <SectionThree/>
       <SectionFour />
+      <SectionFive/>
       <Footer/>
       <BackToTop/>
     </div>

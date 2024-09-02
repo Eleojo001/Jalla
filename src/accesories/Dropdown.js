@@ -22,18 +22,7 @@ function Dropdown({options}) {
       </div>
 
       {/* Dropdown menu that shows/hides based on state */}
-      
-      {/* {isOpen && (
-        <div className="dropdown-menu">
-          <ul>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Radio</a></li>
-            <li><a href="#">Television</a></li>
-            <li><a href="#">Podcast</a></li>
-            <li><a href="#">Presnters</a></li>
-          </ul>
-        </div>
-      )} */}
+
             {isOpen && (
         <div className="dropdown-menu">
           <ul>
